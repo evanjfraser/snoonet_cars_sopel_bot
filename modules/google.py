@@ -13,7 +13,6 @@ with open('creds.json','r') as credsfile:
      api_key = json.load(credsfile)['google_key']
 
 search_engine_id = '003328756286211179155%3Au2rpsdxrmru'
-#eg GET https://www.googleapis.com/customsearch/v1?q=horses&cx=003328756286211179155%3Au2rpsdxrmru&key=AIzaSyCBB5aNVVPYd9rbxobKFu3Lwe-Zif6iwSs
 
 @sopel.module.commands('g','go','goo','google')
 
