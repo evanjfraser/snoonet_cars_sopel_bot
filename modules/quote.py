@@ -74,7 +74,7 @@ def quote(bot, trigger):
 
 			# perform subcommand
 			if subcommand == 'add':
-				if len(data) > 0:
+				if len(data.strip()) > 0:
 					output = dataprovider.add(data)
 				else:
 					output = 'no quote provided'
