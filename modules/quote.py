@@ -74,7 +74,10 @@ def quote(bot, trigger):
 
 			# perform subcommand
 			if subcommand == 'add':
-				output = dataprovider.add(data)
+				if len(data.strip()) > 0:
+					output = dataprovider.add(data)
+				else:
+					output = 'no quote provided'
 			#elif subcommand == 'delete' or subcommand == 'remove':
 			#	output = validate_number_input(data)
 			#	output = dataprovider.remove(int(data)) if output == '' else output
