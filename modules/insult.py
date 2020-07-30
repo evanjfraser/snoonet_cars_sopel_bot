@@ -19,8 +19,7 @@ def insult(bot, trigger):
     insult = insult_list[random.randrange(len(insult_list))]
 
     if trigger.group(2):
-        if nick in trigger.group(2):
-            out = "Hey, %s! %s said you're a %s!" % (trigger.group(2), nick, insult)
+        out = "Hey, %s! %s said you're a %s!" % (trigger.group(2), nick, insult)
     else:
         out = "Hey, %s! You're a %s!" % (nick, insult)
 
