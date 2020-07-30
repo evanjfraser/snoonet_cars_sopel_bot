@@ -22,6 +22,6 @@ def insult(bot, trigger):
         if nick in trigger.group(2):
             out = "Hey, %s! %s said you're a %s!" % (trigger.group(2), nick, insult)
     else:
-        out = "Hey, %s! You're a %s! %s their donger at %s 8====D~ ~ ~" % (nick, motion)
+        out = "Hey, %s! You're a %s!" % (nick, insult)
 
     return bot.say(out)
