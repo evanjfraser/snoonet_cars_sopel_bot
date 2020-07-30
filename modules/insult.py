@@ -5,7 +5,6 @@ import random
 import urllib
 
 
-
 @sopel.module.commands('insult')
 
 
@@ -23,8 +22,7 @@ def insult(bot, trigger):
         if nick in trigger.group(2):
             out = "Hey, %s! %s said you're a %s!" % (trigger.group(2), nick, insult)
         else:
-            out = "%s %s their donger at %s 8====D~ ~ ~" % (nick, motion, trigger.group(2))
-            #out = "%s %s with %s's donger 8====D~ ~ ~" % (nick, motion, trigger.group(2))
+            out = "Hey, %s! You're a %s! %s their donger at %s 8====D~ ~ ~" % (nick, motion)
     else:
         out = "8====D~ ~ ~"
     return bot.say(out)
