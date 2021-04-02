@@ -13,7 +13,10 @@ blow = ["uppercut", "hammerfist", "elbow strike", "shoulder strike", "front kick
 
 def fight(bot, trigger):
     """<nick>, makes you fight <nick> and generates a winner."""
-    fighter1 = trigger.nick
+    if trigger.group(3):
+        fighter1 = trigger.group(3)
+    else:
+        fighter1 = trigger.nick
     if not trigger.group(2):
         out = "gimme something for you to fight with"
     else:
